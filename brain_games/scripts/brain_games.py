@@ -1,7 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-from brain_games import cli
+from brain_games.engine import start_game
+
 
 def main():
-    print('Welcome to the Brain Games!')
-    cli.welcome_user()
+  start_game()
+
+
+if __name__ == '__main__':
+  main()
