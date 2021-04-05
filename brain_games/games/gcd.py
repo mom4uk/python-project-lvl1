@@ -8,8 +8,8 @@ def get_greatest_common_divisor(first_value, second_value):
 	return get_greatest_common_divisor(second_value, first_value % second_value)
 
 def gcd():
-	first_value = get_random_number()
-	second_value = get_random_number()
+	first_value = get_random_number(0, 100)
+	second_value = get_random_number(0, 100)
 	question = "%d %d" % (first_value, second_value)
 	correct_answer = str(get_greatest_common_divisor(first_value, second_value))
 	return (question, correct_answer)

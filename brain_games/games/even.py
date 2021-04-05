@@ -6,6 +6,6 @@ def is_Even(value):
 	return value % 2 == 0
 
 def even():
-	randomValue = get_random_number()
+	randomValue = get_random_number(0, 100)
 	correctAnswer = 'yes' if is_Even(randomValue) == True else 'no'
 	return (randomValue, correctAnswer)

@@ -15,8 +15,8 @@ def get_operator(coll):
 
 def calc():
 	operator = get_operator(operations)
-	first_operand = get_random_number()
-	second_operand = get_random_number()
+	first_operand = get_random_number(0, 100)
+	second_operand = get_random_number(0, 100)
 	question = "%d %s %d" % (first_operand, operator, second_operand)
 	correct_answer = str(operations[operator](first_operand, second_operand))
 	return (question, correct_answer)

@@ -1,4 +1,4 @@
 from random import randint
 
-def get_random_number():
-	return randint(0,100)
+def get_random_number(begin, end):
+	return randint(begin, end)
