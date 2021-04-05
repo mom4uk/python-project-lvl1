@@ -2,5 +2,10 @@
 from brain_games.games.even import DESCRIPTION, even
 from brain_games.engine import start_game
 
+
 def main():
-	start_game(DESCRIPTION, even)
+    start_game(DESCRIPTION, even)
+
+
+if __name__ == '__main__':
+    main()
