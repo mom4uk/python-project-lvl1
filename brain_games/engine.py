@@ -1,28 +1,32 @@
+# -*- coding: utf-8 -*-
+
+"""Engine module."""
+
 import prompt
 
 
 def engine(descripsion, get_task_and_answer):
+    """Engine."""
     print('Welcome to the Brain Games!')
-    cyclesCount = 3
+    cycles_count = 3
     name = prompt.string('May I have your name? ')
-    print("Hello, %s" % (name))
+    message = "'{wrong}' is wrong answer ;(. Correct answer was '{correct}'."
+    print(f'Hello, {name}')
     print(descripsion)
-    while cyclesCount > 0:
+    while cycles_count > 0:
         (question, correct_answer) = get_task_and_answer()
-        print("Question: %s" % (question))
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer != correct_answer:
-            print(
-                "%s is wrong answer ;(. Correct answer was %s \nLet's try again, %s" %
-                (answer, correct_answer, name))
+            print(message.format(wrong=answer, correct=correct_answer))
             return
         else:
             print('Correct!')
-        cyclesCount -= 1
-    print("Congratulations, %s" % (name))
-    return
+        cycles_count -= 1
+    print(f'Congratulations, {name}')
 
 
 def start_game(descripsion=None, get_task_and_answer=None):
+    """Start game."""
     if descripsion:
         engine(descripsion, get_task_and_answer)

@@ -1,19 +1,26 @@
+# -*- coding: utf-8 -*-
+
+"""Brain prime game functions."""
+
 from brain_games.utils import get_random_number
 
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def is_prime(value):
-    if value < 2:
+def is_prime(number):
+    """Check value on prime."""
+    if number < 2 or not number % 2:
         return False
-    i = 2
-    while i <= value / 2:
-        if value % i == 0:
+    counter = 3
+    while counter <= number // 2:
+        if not number % counter:
             return False
-        return True
+        counter += 2
+    return True
 
 
 def prime():
+    """Generate question and correct answer."""
     question = get_random_number(1, 100)
     correct_answer = 'yes' if is_prime(question) else 'no'
     return (str(question), correct_answer)
