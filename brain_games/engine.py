@@ -23,7 +23,7 @@ def engine(descripsion, get_task_and_answer):
         else:
             print('Correct!')
         cycles_count -= 1
-    print(f'Congratulations, {name}')
+    print(f'Congratulations, {name}!')
 
 
 def start_game(descripsion=None, get_task_and_answer=None):
