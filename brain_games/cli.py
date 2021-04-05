@@ -1,4 +1,5 @@
 """Welcome."""
+
 import prompt
 
 

@@ -2,9 +2,8 @@
 
 """Brain progression game functions."""
 
-from random import choice
+from random import choice, randint
 
-from brain_games.utils import get_random_number
 
 LENGTH_ARITHMETIC_PROGRESSION = 10
 DESCRIPTION = 'What number is missing in the progression?'
@@ -23,8 +22,8 @@ def get_progression(initial_value, progression_difference, length_progression):
 
 def progression():
     """Generate question and correct answer."""
-    progression_member = get_random_number(0, 100)
-    progression_difference = get_random_number(1, 25)
+    progression_member = randint(0, 100)
+    progression_difference = randint(1, 25)
     return get_progression(
         progression_member,
         progression_difference,

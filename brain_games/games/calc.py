@@ -3,9 +3,8 @@
 """Brain calc game functions."""
 
 import operator
-from random import choice
+from random import choice, randint
 
-from brain_games.utils import get_random_number
 
 DESCRIPTION = 'What is the result of the expression?'
 
@@ -24,8 +23,8 @@ def get_operator(coll):
 def calc():
     """Generate question and correct answer."""
     random_operator = get_operator(operations)
-    first_operand = get_random_number(0, 100)
-    second_operand = get_random_number(0, 100)
+    first_operand = randint(0, 100)
+    second_operand = randint(0, 100)
     question = f'{first_operand} {random_operator} {second_operand}'
-    correct_answer = str(operations[random_operator](first_operand, second_operand))
-    return (question, correct_answer)
+    correct_answer = operations[random_operator](first_operand, second_operand)
+    return (question, str(correct_answer))

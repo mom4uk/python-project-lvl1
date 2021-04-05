@@ -2,7 +2,7 @@
 
 """Brain gcd game functions."""
 
-from brain_games.utils import get_random_number
+from random import randint
 
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
@@ -16,8 +16,8 @@ def get_greatest_common_divisor(first_value, second_value):
 
 def gcd():
     """Generate question and correct answer."""
-    first_value = get_random_number(0, 100)
-    second_value = get_random_number(0, 100)
+    first_value = randint(0, 100)
+    second_value = randint(0, 100)
     question = f'{first_value} {second_value}'
     correct_answer = str(get_greatest_common_divisor(first_value, second_value))
     return (question, correct_answer)
