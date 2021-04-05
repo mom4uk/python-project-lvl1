@@ -19,7 +19,7 @@ def engine(descripsion, get_task_and_answer):
         answer = prompt.string('Your answer: ')
         if answer != correct_answer:
             print(message.format(wrong=answer, correct=correct_answer)
-                + f'Let\'s try again, Bill!'
+                + f'Let\'s try again, {name}!'
             )
             return
         else:
