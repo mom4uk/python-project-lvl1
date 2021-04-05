@@ -27,5 +27,5 @@ def calc():
     first_operand = get_random_number(0, 100)
     second_operand = get_random_number(0, 100)
     question = f'{first_operand} {random_operator} {second_operand}'
-    correct_answer = str(operations[operator](first_operand, second_operand))
+    correct_answer = str(operations[random_operator](first_operand, second_operand))
     return (question, correct_answer)
