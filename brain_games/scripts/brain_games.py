@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-"""Brain calc game."""
+"""Welcome user script."""
 
 from brain_games.cli import welcome_user
 
 
 def main():
-    """Start games."""
+    """Welcomes user."""
+    print('Welcome to the Brain Games!')
     welcome_user()
 
 
